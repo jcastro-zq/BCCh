@@ -5,7 +5,7 @@ import re
 
 app = Flask(__name__)
 
-API_KEY = "mi_clave_ultra_secreta_123"
+import os API_KEY = os.environ.get("API_KEY")
 
 @app.route('/divisas', methods=['GET'])
 def get_divisas():
